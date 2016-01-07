@@ -1,0 +1,7 @@
+var Employee JSON = '{ "employees" : [' +
+					   '{ "firstName":"John" , "lastName":"Doe" , "phone":"555 1234567"},' +
+					   '{ "firstName":"Anna" , "lastName":"Smith" , "phone":"455 1234567"},' +
+					   '{ "firstName":"Anna" , "lastName":"Vince" , "phone":"435 1234567"},' +
+					   '{ "firstName":"Jake" , "lastName":"Jones" , "phone":"425 1234567"},' +
+					   '{ "firstName":"Tedd" , "lastName":"Birch" , "phone":"415 1234567"},' +
+					   '{ "firstName":"Peter" , "lastName":"Jones" , "phone":"355 1234567"} ]}';
