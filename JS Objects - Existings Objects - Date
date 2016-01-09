@@ -1,0 +1,24 @@
+if (CDEPENDD.c_birthdatE_STR.toString().length > 0) {
+
+    if (CDEPENDD.c_birthdatE_STR  instanceof Date)
+    {
+    var dd = CDEPENDD.c_birthdatE_STR.getDate();
+    var mm = CDEPENDD.c_birthdatE_STR.getMonth() +1;
+    var y = CDEPENDD.c_birthdatE_STR.getFullYear();
+
+        if (mm.toString().length == 1)
+            mm = "0" + mm.toString();
+
+        if (dd.toString().length == 1)
+            dd = "0" +dd.toString();
+
+        CDEPENDD.c_birthdatE_STR = y + "-" +mm + "-" +dd;
+     }
+        
+ }
+ 
+ 
+ //Reference
+ // Initial date format - Wed Mar 25 2015 01:00:00 GMT+0100 (W. Europe Standard Time)
+ // Needs to be converted to yyyy-mm-dd format
+ 
