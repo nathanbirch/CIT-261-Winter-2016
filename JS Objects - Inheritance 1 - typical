@@ -1,0 +1,10 @@
+//java or C# style...
+
+public class Animal{
+    public void breathe(){
+        // ...breathing
+    }
+}
+public class Dog extends Animal{
+    // now dog can breathe too!
+}
