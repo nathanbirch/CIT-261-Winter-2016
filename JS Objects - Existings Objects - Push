@@ -1,0 +1,15 @@
+    return {
+        scope: { datestruct: '=' },
+
+        link: function (scope, element, attrs) {
+
+            scope.monthnames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            scope.months = [];
+            for (var i = +attrs.offset; i < +attrs.range + 1; i++) {
+
+                scope.months.push(i);
+
+            }
+
+            scope.ChooseOne = 'Choose One';
+...
