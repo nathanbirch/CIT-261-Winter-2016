@@ -1,0 +1,8 @@
+var x = document.images;
+for (var i=0;i<x.length;i++)
+{
+	var theName = x[i].name;
+	theStatus.theName = 'normal';
+}
+
+//source http://www.quirksmode.org/js/associative.html
