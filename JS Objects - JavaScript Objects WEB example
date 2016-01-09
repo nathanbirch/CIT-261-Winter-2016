@@ -1,0 +1,10 @@
+person = new Object()
+person.name = "Tim Scarfe"
+person.height = "6Ft"
+ 
+person.run = function() {
+    this.state = "running"
+    this.speed = "4ms^-1"
+}
+
+// Source http://www.javascriptkit.com/javatutors/oopjs.shtml
