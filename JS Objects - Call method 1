@@ -1,0 +1,23 @@
+//initial object
+var person = {
+    name: "Nathan Birch",
+    age: 23,
+    height: "5,11",
+    sex: "male",
+    describe: function() {
+        return "Hello, I am  " + this.name + ". I am  " + this.age + " years old, am " + this.height + " feet tall, and am a " + this.sex + "."; 
+    }
+};
+
+//inherited object
+var personSpouse = {
+    name: "Sarah Birch",
+    age: 31,
+    height: "5,6",
+    sex: "female",
+}
+
+//then make the call
+console.log( person.describe.call( personSpouse ) );
+
+Output "Hello, I am Sarah Birch. I am 31 years old, am 5,6 feet tall, and am a female."
