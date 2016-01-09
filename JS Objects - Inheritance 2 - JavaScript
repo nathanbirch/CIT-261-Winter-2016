@@ -1,7 +1,7 @@
 function Animal(){
 }
 Animal.prototype.breathe = function(){
-    // do some breathing
+    // ...breathing...
 }
 function Dog(){
 }
