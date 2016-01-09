@@ -1,0 +1,27 @@
+function exterior(extColor, doorCount,  airWing, tireWidth) {
+  this.extColor = extColor;
+  this.doorCount = doorCount;
+  this.airWing = airWing;
+  if (tireWidth > 10)
+    this.wideTire = true;
+  else
+    this.wideTire = false;
+}
+function interior(intColor, seatCoverType, benchOption) {
+  this.intColor = intColor;
+  this.seatCoverType = seatCoverType;
+  this.bench = benchOption;
+}
+volvoInterior = new interior("blue", "leather", true);
+volvoExterior = new exterior("black", 4, true, 15);
+
+
+function interior(intColor, seatCoverType, benchOption, extColor, doorCount,  
+                  airWing, tireWidth ) {
+  this.intColor = intColor;
+  this.seatCoverType = seatCoverType;
+  this.bench = benchOption;
+  exterior.call(this, extColor, doorCount,  airWing, tireWidth);
+}
+
+// source http://www.webreference.com/js/column26/call.html
