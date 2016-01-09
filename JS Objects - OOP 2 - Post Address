@@ -1,0 +1,13 @@
+    $scope.postPersonalAddress = function (CADDRESSD) {
+
+        //TO DO Only when the client is authenticated
+        //if (ddaccountmodel.dirtyCode != 1) {
+        postPersonalAddressService.postData(CADDRESSD).then(function (data) {
+
+            if (data.data[0].dataExists != 0) {
+                return data;
+        } else {
+            }
+            });
+
+    };
