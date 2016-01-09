@@ -1,0 +1,32 @@
+//The massive object below represents an employees timesheet for one 2-week pay period.
+
+$scope.c_tL_TIMESHEEToursEmpty = {
+    dirtyCode: 1,
+    pin: 0,
+    hours: 0,
+    activitY_ID: "",
+    product: "",
+    projecT_ID: "",
+    qtY_DAY1: 0,
+    qtY_DAY2: 0,
+    qtY_DAY3: 0,
+    qtY_DAY4: 0,
+    qtY_DAY5: 0,
+    qtY_DAY6: 0,
+    qtY_DAY7: 0,
+    qtY_DAY8: 0,
+    qtY_DAY9: 0,
+    qtY_DAY10: 0,
+    qtY_DAY11: 0,
+    qtY_DAY12: 0,
+    qtY_DAY13: 0,
+    qtY_DAY14: 0,
+    tasK_PROFILE_ID: "",
+    task: "",
+    totaL_SUM: 0,
+    trc: "",
+    trcdesc: "",
+    week: "",
+    trccollapse: false,
+    profileidcollapse: false
+};
