@@ -1,0 +1,10 @@
+function Animal(){
+}
+Animal.prototype.breathe = function(){
+    // do some breathing
+}
+function Dog(){
+}
+Dog.prototype = new Animal()
+Dog.prototype.constructor = Dog
+// now dog can breathe too!
