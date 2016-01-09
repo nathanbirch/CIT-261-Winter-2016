@@ -1,0 +1,10 @@
+//example 1
+var NathanFavorites = new array();
+NathanFavorites["color"] = "yellow";
+NathanFavorites["food"] = "Nachos";
+document.write("Nathan's favorite color is " + NathanFavorites["color"] + "!!!");
+document.write("Nathan's favorite food is " + NathanFavorites["food"] + "!!!");
+
+//example 2
+var NathanYouChoose = {foodOption1: 'Nachos', foodOption2: 'Burritos'};
+alert(NathanYouChoose['foodOption2']);
