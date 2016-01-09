@@ -1,0 +1,19 @@
+$scope.SaveAddressAdd = function (CADDRESSD, dirtyCode, addresstypestruct) {
+
+            if (dirtyCode == 1 || dirtyCode == 2) {
+                CADDRESSD.dirtyCode = dirtyCode;
+                CADDRESSD.country = CADDRESSD.country1;
+                CADDRESSD.state = CADDRESSD.state1;
+                CADDRESSD.addresS_TYPE = addresstypestruct;
+                CADDRESSD.postal = CADDRESSD.postal.substr(0, 5);
+                }
+            if (dirtyCode == 2) {
+                CADDRESSD.addresslong = CADDRESSD.addresS1 + " " + CADDRESSD.city + ", " + CADDRESSD.state + " " +CADDRESSD.postal + " " +CADDRESSD.county;
+                }
+
+            $rootScope.CADDRESSD = angular.copy(CADDRESSD);
+
+    $scope.postPersonalAddress(CADDRESSD);
+
+    $location.path('/profile/personal/');
+};
