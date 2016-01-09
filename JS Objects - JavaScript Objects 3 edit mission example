@@ -1,0 +1,23 @@
+    //notice the attributes of the object in the previous example
+    
+    $scope.OpenMissionEditAccountPage = function (editAccount, ceProfileClientModel) {
+        $scope.InvalidDates = false;
+        $scope.selectedYearOption = editAccount.c_jpM_DATE_1.substr(0, 4);
+        $scope.userYearPreferenceIndex = $scope.selectedYearOption;
+        $scope.dateStruct.year1 = $scope.userYearPreferenceIndex;
+
+        $scope.selectedYearOptionSecond = editAccount.c_jpM_DATE_2.substr(0, 4);;
+        $scope.userYearPreferenceIndexSecond = $scope.selectedYearOptionSecond;
+        $scope.dateStruct.year2 = $scope.userYearPreferenceIndexSecond;
+
+        $scope.userMonthPreferenceIndex = editAccount.c_jpM_DATE_1.substr(5, 2);
+        $scope.dateStruct.month1 = $scope.userMonthPreferenceIndex;
+
+        $scope.userMonthPreferenceIndexSecond = editAccount.c_jpM_DATE_2.substr(5, 2);
+        $scope.dateStruct.month2 = $scope.userMonthPreferenceIndexSecond;
+
+        $rootScope.CJPMD = editAccount;
+        $rootScope.ceProfileClientModelEdit = angular.copy(ceProfileClientModel);
+        $rootScope.dateStruct = $scope.dateStruct;
+        $location.path('/profile/churchexperience/missions/edit/');
+    };
