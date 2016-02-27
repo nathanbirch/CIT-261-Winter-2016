@@ -1,0 +1,129 @@
+//THE FOLLOWING ARE TWO GENERIC FUNCTIONS - PASS IN THE CLASS NAME TO USE THEM
+//HTML: onmouseover='addCSSClass(this,"cssA")' onmouseout='removeCSSClass(this,"cssA")'
+function addCSSClass(item, classname) {
+  var obj = item
+  if (typeof item=="string") {
+      obj = document.getElementById(item)
+  }
+  obj.className += " " + classname
+}
+function removeCSSClass(item, classname) {
+  var obj = item
+  if (typeof item=="string") {
+      obj = document.getElementById(item)
+  }
+  var classes = ""+obj.className
+  while (classes.indexOf(classname)>-1) {
+      classes = classes.replace (classname, "")
+  }
+  obj.className = classes
+}
+//THE TWO FUNCTION ABOVE ARE TWO GENERIC FUNCTIONS - PASS IN THE CLASS NAME TO USE THEM
+//THE TWO FUNCTIONS BELOW ARE SIMILAR TO THE TWO ABOVE, BUT WILL CYCLE THROUGH THE COLORS
+var Run = 0;
+function addCSSClass2(item) {
+  var obj = item
+  if (typeof item=="string") {
+      obj = document.getElementById(item)
+  }
+  checkRun(2, obj);
+}
+function removeCSSClass2(item) {
+  var obj = item
+  if (typeof item=="string") {
+      obj = document.getElementById(item)
+  }
+  var classes = ""+obj.className
+  // while (classes.indexOf(classname)>-1) {
+  //     classes = classes.replace (classname, "")
+  // }
+  obj.className = "cssJSClassChild"
+}
+//THE TWO FUNCTIONS ABOVE ARE SIMILAR TO THE TWO BEFORE, BUT WILL CYCLE THROUGH THE COLORS
+var run = 0;
+function checkRun(runState, obj) {
+  if (runState == 1) { // this will run on click function
+    if (run == 0) {
+      obj.className = "cssJSClassChild cssA"; 
+      run = 1;
+    }
+    else if (run == 1) {
+      obj.className = "cssJSClassChild cssB"; 
+      run = 2;
+    }
+    else if (run == 2) {
+      obj.className = "cssJSClassChild cssC"; 
+      run = 3;
+    }
+    else if (run == 3) {
+      obj.className ="cssJSClassChild cssD"; 
+      run = 4;
+    }
+    else if (run == 4) {
+      obj.className ="cssJSClassChild cssF"; 
+      run = 5;
+    }
+    else {
+      obj.className ="cssJSClassChild cssW"; 
+      run = 0;
+    }
+  }
+  else { // this will run on hover function
+    if (Run == 0) {
+      obj.className = "cssJSClassChild cssA"; 
+      Run = 1;
+    }
+    else if (Run == 1) {
+      obj.className = "cssJSClassChild cssB"; 
+      Run = 2;
+    }
+    else if (Run == 2) {
+      obj.className = "cssJSClassChild cssC"; 
+      Run = 3;
+    }
+    else if (Run == 3) {
+      obj.className ="cssJSClassChild cssD"; 
+      Run = 4;
+    }
+    else {
+      obj.className ="cssJSClassChild cssF"; 
+      Run = 0;
+    }
+  }
+}
+function addCSSClassClick(item) {
+  var obj = item
+  if (typeof item=="string") {
+      obj = document.getElementById(item)
+  }
+  checkRun(1, obj);
+}
+function myTimer(){
+  //countdown();
+  setInterval(function(){
+    setTimeout(
+    function() {
+      document.getElementById('thirdBox').className='cssJSClassChild cssA';
+    }, 1000);
+    setTimeout(
+    function() {
+      document.getElementById('thirdBox').className='cssJSClassChild cssB';
+    }, 2000);
+    setTimeout(
+    function() {
+      document.getElementById('thirdBox').className='cssJSClassChild cssC';
+    }, 3000);
+    setTimeout(
+    function() {
+      document.getElementById('thirdBox').className='cssJSClassChild cssD';
+    }, 4000);
+    setTimeout(
+    function() {
+      document.getElementById('thirdBox').className='cssJSClassChild cssF';
+    }, 5000);
+    setTimeout(
+    function() {
+      document.getElementById('thirdBox').className='cssJSClassChild cssW';
+    }, 6000);
+  }, 10000);
+}
