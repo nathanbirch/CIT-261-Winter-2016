@@ -1,0 +1,8 @@
+<h1 class="titleCaptionBig">Manipulating CSS Classes with JavaScript</h1>
+        <table class='portfolioTable' style='margin-bottom:150px'>
+            <tr style="border:0px; text-align:center;">
+                <td><div class="cssJSClassChild" onmouseover='addCSSClass2(this)' onmouseout='removeCSSClass2(this)'>Hover Over Me</div></td>
+                <td><div class="cssJSClassChild" onClick='addCSSClassClick(this)'>Click Me</div></td>
+                <td><div class="cssJSClassChild" id="thirdBox">Wait For Me<br><span id="jsTimer"></span></div></td>
+            </tr>
+        </table>
